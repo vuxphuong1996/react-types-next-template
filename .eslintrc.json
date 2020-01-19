@@ -1,0 +1,51 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": ["react", "prettier", "@typescript-eslint"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-var": "warn",
+    "no-console": "off",
+    // "react-hooks/rules-of-hooks": "error",
+    // "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "@typescript-eslint/explicit-function-return-type": [
+      "warn",
+      {
+        "allowExpressions": true,
+        "allowTypedFunctionExpressions": true
+      }
+    ]
+    // "indent": "off",
+    // "@typescript-eslint/indent": "off"
+  },
+  "globals": {
+    // "Atomics": "readonly",
+    // "SharedArrayBuffer": "readonly"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "babel-module": {}
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}
